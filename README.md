@@ -29,7 +29,7 @@ Mi repositorio sobre herramientas y configuraciones para la fase de reconocimien
 ```shell
 - nuclei -target https://example.com
 ```
-#### Escenao de varios objetivos
+#### Escaneo de varios objetivos
 ```shell
 - nuclei -targets urls.txt
 ```
