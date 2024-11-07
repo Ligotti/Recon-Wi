@@ -2,7 +2,7 @@
 Mi repositorio sobre herramientas y configuraciones para la fase de reconocimiento de vulnerabilidades.
 
 
-```Nmap
+#Nmap
 ##Puertos tcp.
 nmap -sT -sV -O -p- <ip>
 
