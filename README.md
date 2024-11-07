@@ -1,21 +1,78 @@
-# Recon-
+# Recon-Wi
 Mi repositorio sobre herramientas y configuraciones para la fase de reconocimiento de vulnerabilidades.
 
 
 # Herramientas de escaneo
 ## Nmap
 ```shell
-
-- nmap -sT -sV -O -p- <ip>
-- nmap -sTCV <ip> 
+- nmap -sn <ip/24>
+- nmap -sV -sT -O -p- <ip>
+- nmap -sTCV <ip>
+- nmap --script vuln <ip>
+- nmap -f -sS -sV -Pn --script auth <ip>
+- nmap -f -sS -sV -Pn --script default <ip>
 ```
-### Puertos UDP
+#### Puertos UDP
 ```shell
 - nmap -sU -sC --top-ports 100 <ip>
 ```
-# Herramientas de Escaneo
+## Gobuster
+```shell
+- gobuster dir -u <url> -w /home/kali/Downloads/seclist/directory-list-lowercase-2.3-medium.txt -x php,html,txt
+```
+#### Realizar fuzzing
+```shell
+- gobuster fuzz -u https://example.com?FUZZ=test -w parameter-names.txt
+```
+## Nuclei
+#### Escaneo de un solo objetivo
+```shell
+- nuclei -target https://example.com
+```
+#### Escenao de varios objetivos
+```shell
+- nuclei -targets urls.txt
+```
+#### Network scan
+```shell
+- nuclei -target <ip>/24 
+```
+# Nikto
+```shell
+- nikto -h example.com
+- nikto -h example.com -port 8083
+- nikto -h example.com -maxtime number.of.seconds
+```
 
-### Configuración de Nmap
+# LFI 
+```shell
+foo.php?file=../../../../../../../etc/passwd
+```
+
+# Upload extensions
 
 ```shell
-nmap -sC -sV -oA resultados/scan 192.168.1.1
+- PHP: .php, .php2, .php3, .php4, .php5, .php6, .php7, .phps, .phps, .pht, .phtm, .phtml, .pgif, .shtml, .htaccess, .phar, .inc, .hphp, .ctp, .module
+- Working in PHPv8: .php, .php4, .php5, .phtml, .module, .inc, .hphp, .ctp
+- ASP: .asp, .aspx, .config, .ashx, .asmx, .aspq, .axd, .cshtm, .cshtml, .rem, .soap, .vbhtm, .vbhtml, .asa, .cer, .shtml
+- Jsp: .jsp, .jspx, .jsw, .jsv, .jspf, .wss, .do, .action
+- Coldfusion: .cfm, .cfml, .cfc, .dbm
+- Flash: .swf
+- Perl: .pl, .cgi
+- Erlang Yaws Web Server: .yaws
+```
+# Tomcat default credentials
+
+```shell
+admin:admin
+
+tomcat:tomcat
+
+admin:
+
+admin:s3cr3t
+
+tomcat:s3cr3t
+
+admin:tomcat
+```
