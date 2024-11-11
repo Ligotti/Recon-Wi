@@ -49,7 +49,7 @@ Mi repositorio sobre herramientas y configuraciones para la fase de reconocimien
 ```
 ### Ataque de diccionario
 ```shell
-- - wpscan --url <url> --passwords <ruta de diccionarios>
+- wpscan --url <url> --passwords <ruta de diccionarios>
 ```
 ### Enumerar usuarios
 ```shell
