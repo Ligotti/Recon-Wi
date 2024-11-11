@@ -37,13 +37,13 @@ Mi repositorio sobre herramientas y configuraciones para la fase de reconocimien
 ```shell
 - nuclei -target <ip>/24 
 ```
-# Nikto
+## Nikto
 ```shell
 - nikto -h example.com
 - nikto -h example.com -port 8083
 - nikto -h example.com -maxtime number.of.seconds
 ```
-# Wpscan
+## Wpscan
 ```shell
 - wpscan --url <url>
 ```
