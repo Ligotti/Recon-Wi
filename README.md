@@ -93,3 +93,17 @@ tomcat:s3cr3t
 
 admin:tomcat
 ```
+# Pivoting
+### Local 
+```shell
+- ssh -L <puerto local>:127.0.0.1:<puerto remoto> <usuario>@<ip> 
+```
+### Remoto
+```shell
+- ssh -R <puerto local>:127.0.0.1:<puerto remoto> <usuario>@<ip> 
+```
+### Dinámico 
+```shell
+- ssh -D <puerto local que actuará como proxy> <usuario>@<ip> 
+```
+
