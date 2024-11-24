@@ -1,8 +1,5 @@
 
-# Mi repositorio sobre herramientas y configuraciones para la fase de reconocimiento de vulnerabilidades.  <p align="left"> <a href="https://www.linux.org/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/linux/linux-original.svg" alt="linux" width="40" height="40"/> </a> </p>
-
-
-
+# Mi repositorio sobre herramientas y configuraciones para la fase de reconocimiento de vulnerabilidades. 
 
 # Herramientas de escaneo 
 ## Nmap
@@ -108,4 +105,6 @@ admin:tomcat
 ```shell
 - ssh -D <puerto local que actuará como proxy> <usuario>@<ip> 
 ```
-
+<div align="left">
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" height="39" alt="linux logo"  />
+</div>
