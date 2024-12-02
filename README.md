@@ -54,6 +54,40 @@
 ```shell
 - wpscan --url <url> --enumerate u 
 ```
+## SMB
+### Rpcclient
+```shell
+- rpcclient -U '' -N <ip objetivo>
+```
+- crackmapexec smb IP
+- crackmapexec smb IP -u <usuario> -p <contraseña/directorio de contraseñas>
+
+### Smbmap
+```shell
+- smbmap -H <IP> -R <carpeta>
+- smbmap -H <IP> -u <USUARIO> -p <CONTRASEÑA>
+- smbmap -H <IP> -u <USUARIO> -P <ARCHIVO_CON_CONTRASEÑAS>
+```
+### Smbclient
+```shell
+- smbclient //<IP>/<ruta> -U <usuario>
+- smbclient -L //<IP> -U <USUARIO> 
+```
+### Rpcclient
+```shell
+- rpcclient -U '' -N <ip objetivo>
+- rpcclient <IP> -U <USUARIO>
+```
+#### Comandos
+```shell
+- enumdomusers
+- queryuser <RID> <--- Obtén detalles de un usuario específico.
+enumdomgroups:
+group:[Domain Admins] rid:[0x200]
+group:[Domain Users] rid:[0x201]
+- netshareenum <--- Obtener detalles de recursos compartidos.
+- getdominfo:
+```
 
 # Path Traversal 
 ```shell
