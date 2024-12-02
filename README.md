@@ -7,6 +7,7 @@
 - nmap -sn <ip/24>
 - nmap -sV -sT -O -p- <ip>
 - nmap -sTCV <ip>
+- nmap -sS -sC --top-ports 100 <ip>
 - nmap --script vuln <ip>
 - nmap -f -sS -sV -Pn --script auth <ip>
 - nmap -f -sS -sV -Pn --script default <ip>
